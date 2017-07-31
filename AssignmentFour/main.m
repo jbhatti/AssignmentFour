@@ -10,8 +10,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+ 
+        NSArray *unsortedArray = @[ @3, @7, @6, @8 ];
+        NSNumber *highestNumber = [unsortedArray valueForKeyPath:@"@max.self"];
+        NSLog(@"%@", highestNumber);
+        
     }
     return 0;
 }
